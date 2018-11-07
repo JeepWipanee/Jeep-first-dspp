@@ -1,6 +1,7 @@
 App = {
      web3Provider: null,
      contracts: {},
+     account: 0X0,
 
      init: function() {
           
