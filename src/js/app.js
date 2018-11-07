@@ -54,9 +54,21 @@ App = {
                   App.contracts.ChainList = TruffleContract(ChainListArtiface);
                   App.contracts.ChainList.setProvider(App.web3Provider);
                   return App.reloadArticles();
-                  
+
           });
      },
+
+     reloadArticles: function(){
+           App.displayAccountInfo();
+           $('#articlesRow').empty();
+
+           App.contracts.ChainList.deployed().then(function(instance){
+            return instance.getArticle();
+
+           }).then(function(article){
+                 console.log(article);
+           });
+     }
 };
 
 $(function() {
