@@ -4,7 +4,7 @@ App = {
 
      init: function() {
           
-            var articleRow = $('#articleRow');
+            var articleRow = $('#articlesRow');
             var articleTemplate = $('#articleTemplate');
             
             articleTemplate.find('.panel-title').text('สินค้าชิ้นที่ 1');
@@ -12,7 +12,7 @@ App = {
             articleTemplate.find('.article-price').text('10.24');
             articleTemplate.find('.article-seller').text('ชื่อผู้ขาย');
 
-            articleRow.append(articleTemplate);
+            articleRow.append(articleTemplate.html());
 
           return App.initWeb3();
      },
