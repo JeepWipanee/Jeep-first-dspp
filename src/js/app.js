@@ -27,7 +27,15 @@ App = {
      },
 
      displayAccountInfo: function(){
-
+      web3.eth.getCoinbase(function(err, balance){
+            if(err === null){
+                  console.log("No error");
+                  App.account = account;
+                  $('#account').text(account);
+            }else{
+                  console.log(err);
+            }
+      })
      },
 
      initContract: function() {
