@@ -15,6 +15,10 @@ contract ChainList{
         price = _price;
     }
 
+    constructor() public{
+        sellArticle("Iphone Xs","มือถือที่แพงมาก","10000000000000000000";
+    }
+
     // get thing info
     function getArticle()  public view returns(address _seller,string _name,string _description,uint256 _price)
     {
